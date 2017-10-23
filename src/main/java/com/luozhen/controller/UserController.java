@@ -23,4 +23,11 @@ public class UserController {
 		User user = userService.selectTest(id);
 		return user;
 	}
+	
+	@RequestMapping(value="/selectAlipay")
+	@ResponseBody
+	public void selectAlipay() {
+		userService.createAlipay();
+		userService.selectAlipay();
+	}
 }
